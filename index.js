@@ -8,7 +8,7 @@ app.get('/rise/initiate', (req, res) => {
         return res.status(400).send('Missing token');
     }
     const appId = 'YOUR_APP_ID';
-    const redirectUrl = encodeURIComponent('https://YOUR-RENDER-URL.onrender.com/rise/callback');
+    const redirectUrl = encodeURIComponent('https://rise-middleware.onrender.com/rise/callback');
     const installUrl = `https://platform.rise.ai/installer/install?token=${token}&appId=${appId}&redirectUrl=${redirectUrl}`;
 
     res.redirect(installUrl);
